@@ -1,6 +1,18 @@
 #include <iostream>
 #include <cstdlib>
+using namespace std;
 
+void print_array(float* arr, int size)
+{
+	cout<<"\n===================================\n";
+	for (size_t i = 0; i < size; i++)
+	{
+		cout<<arr[i] <<endl;
+	}
+
+	cout<<"===================================\n";
+	
+}
 
 float random_float()
 {
