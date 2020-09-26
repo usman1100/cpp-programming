@@ -1,7 +1,9 @@
 #include<iostream>
 #include<cstdlib>
+#include<ctime>
 #include "utils.h"
 
+using namespace std;
 template <int n_inputs>
 class neuron
 {
@@ -27,10 +29,17 @@ public:
            result += inputs[i] * weights[i];
         }
         result += bias;
-
-        
-
         return result;
+        
+    }
+
+
+    void print_weights()
+    {
+        for (int i = 0; i < n_inputs; i++)
+        {
+            cout<<weights[i] <<endl;
+        }
         
     }
 };
@@ -38,5 +47,12 @@ public:
 
 int main()
 {
-
+    srand(time(NULL));
+    neuron<5> n[10];
+    for (int i = 0; i < 5; i++)
+    {
+        n[i].print_weights();
+        cout<<"-------------------------------\n";
+    }
+    
 }
