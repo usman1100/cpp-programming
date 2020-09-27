@@ -29,13 +29,9 @@ public:
 int main()
 {
     srand(time(NULL));
-    layer<10, 5> in;
-
     float inputs[5] = {1.32, 5.12, 0.43, 2.545, -2.55};
-    float* res = new float[10];
 
-    res = in.calculate(inputs);
-
-    print_array(res, 10);
+    layer<10, 1> in;
+    
     
 }
